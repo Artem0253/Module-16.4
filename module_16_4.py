@@ -18,7 +18,7 @@ async def get_user_page() -> List[User]:
     return users
 
 
-@app.post('/user/{username}/{age}')
+@app.post('/{username}/{age}')
 async def user_register(user: User, username: str, age: int):
     len_user = len(users)
     if len_user == 0:
